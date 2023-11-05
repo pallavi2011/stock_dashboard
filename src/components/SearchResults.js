@@ -6,7 +6,7 @@ const SearchResults = ({ results }) => {
   const {darkMode} = useContext(ThemeContext);
   const {setStockSymbol} = useContext(StockContext)
   return (
-    <ul className={`absolute top-12 border-2 w-full rounded-md h-64 overflow-y-scroll ${darkMode ? "bg-gray-900 border-gray-800 custom-scrollbar custom-scrollbar-dark":"bg-white border-neutral-200 custom-scrollbar"}`}>
+    <ul className={`absolute top-12 border-2 w-full rounded-md h-64 overflow-y-scroll ${darkMode ? "bg-gray-900 border-gray-800 custom-scrollbar custom-scrollbar-dark":"bg-white border-neutral-200 custom-scrollbar"} data-test-id`}>
       {results.map((item) => {
         return (
           <li

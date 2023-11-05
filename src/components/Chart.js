@@ -85,6 +85,7 @@ const Chart = () => {
             </linearGradient>
           </defs>
           <Area
+            id="area"
             type="monotone"
             dataKey="value"
             stroke="#312e81"
@@ -92,7 +93,7 @@ const Chart = () => {
             fill="url(#chartColor)"
             strokeWidth={0.5}
           />
-          <Tooltip contentStyle={darkMode ? {backgroundColor:"#111827"} : null} itemStyle={darkMode ? {color:"#818cf8"}:null}/>
+          <Tooltip contentStyle={darkMode ? {backgroundColor:"#111827"} : null} itemStyle={darkMode ? {color:"#818cf8"}:null} alt="tooltip"/>
           <XAxis dataKey="date" />
           <YAxis domain={["dataMin", "dataMax"]} />
         </AreaChart>
